@@ -1,0 +1,758 @@
+/* الإعدادات العامة */
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif;background:#eef6ff;color:#17324d}
+body{direction:rtl}
+a{color:#2563eb;text-decoration:none}
+
+/* بطاقة تسجيل الدخول */
+.auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.auth-card{width:min(430px,100%);background:#fff;border:1px solid #c9dff5;border-radius:18px;padding:24px;box-shadow:0 12px 35px #17324d18}
+.auth-logo{width:80px;height:80px;display:block;margin:0 auto 12px;border-radius:18px;object-fit:cover}
+.auth-card h1{text-align:center;margin:5px 0 8px}
+.auth-card p{text-align:center;color:#60778d}
+
+/* حقول تسجيل الدخول */
+.auth-card label{display:block;font-weight:700;margin:12px 0 6px}
+.auth-card input,.toolbar input{width:100%;padding:12px;border:1px solid #b8cee4;border-radius:10px;font:inherit;background:#f9fcff}
+.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer}
+.primary{background:#2563eb;color:#fff}
+.success-btn{background:#16a34a;color:#fff}
+.auth-card .btn{width:100%;margin-top:15px}
+
+/* روابط الحساب والرسائل */
+.auth-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:13px}
+.error,.success{padding:10px;border-radius:10px;margin:10px 0;text-align:center}
+.error{background:#fee2e2;color:#991b1b}
+.success{background:#dcfce7;color:#166534}
+
+/* رأس الموقع العام */
+.site-header{height:58px;background:#fff;border-bottom:1px solid #c9dff5;display:flex;justify-content:space-between;align-items:center;padding:0 18px;position:sticky;top:0;z-index:5}
+.site-header div{display:flex;gap:12px}
+
+/* الصفحة الرئيسية القديمة العامة */
+.customer{max-width:900px;margin:auto;padding:18px}
+.hero-card{display:flex;justify-content:space-between;align-items:center;background:#dbeafe;border:1px solid #93c5fd;border-radius:16px;padding:20px;margin-bottom:14px}
+.hero-card img{width:90px;height:90px;border-radius:18px;object-fit:cover}
+
+/* البحث والبطاقات العامة */
+.toolbar{display:flex;gap:8px;margin-bottom:14px}
+.cards{display:grid;gap:10px}
+.card{background:#fff;border:1px solid #c9dff5;border-radius:14px;padding:14px}
+
+/* بطاقة الحلاق العامة */
+.barber-card{display:flex;gap:14px;align-items:center;cursor:pointer}
+.barber-card img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.barber-card h3{margin:0 0 5px}
+.barber-card p{margin:0 0 5px;color:#2563eb}
+.empty{text-align:center;color:#6b7f90}
+
+/* النافذة العامة */
+.modal{position:fixed;inset:0;background:#0b1f3380;display:flex;align-items:center;justify-content:center;padding:15px;z-index:50}
+.modal-card{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:16px;padding:18px;box-shadow:0 20px 50px #0004}
+.modal-close{margin-top:12px;width:100%;border:0;background:#e8eef5;padding:10px;border-radius:9px}
+
+/* الخدمات والمواعيد العامة */
+.service-option{display:block;border:1px solid #c9dff5;border-radius:10px;padding:11px;margin:8px 0}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.slot{padding:9px;border:1px solid #93c5fd;background:#eff6ff;border-radius:8px;cursor:pointer}
+.slot.selected{background:#2563eb;color:#fff}
+.hr{border:0;border-top:1px solid #d7e5f2;margin:18px 0}
+
+/* فوتر الموقع العام */
+.site-footer{margin-top:24px;padding:22px 18px;background:#fff;border-top:1px solid #c9dff5;text-align:center}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.footer-links a{font-weight:700;color:#2563eb;transition:opacity .2s}
+.footer-links a:hover{opacity:.75}
+.footer-contact{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:10px}
+.footer-contact a{font-size:13px;color:#60778d}
+.footer-copy{margin-top:12px;font-size:12px;color:#6b7f90}
+
+/* صفحة الدخول فقط */
+.login-page{min-height:100vh;display:flex;flex-direction:column;background:linear-gradient(135deg,#eef6ff 0%,#f8fbff 55%,#e0efff 100%)}
+.login-page .auth-wrap{flex:1;min-height:auto;padding:45px 20px 28px}
+.login-page .auth-card{width:min(440px,100%);padding:30px 28px;border-radius:22px;box-shadow:0 18px 45px #17324d1c}
+.login-page .login-brand{text-align:center;margin-bottom:20px}
+.login-page .auth-logo{width:88px;height:88px;margin:0 auto 14px;border:4px solid #eff6ff;box-shadow:0 8px 22px #2563eb20}
+.login-page .auth-card h1{font-size:27px;color:#17324d;margin:4px 0 8px}
+.login-page .auth-card p{font-size:14px;line-height:1.8;margin:0;color:#60778d}
+
+/* حقول صفحة الدخول */
+.login-page .auth-card form{margin-top:18px}
+.login-page .auth-card label{font-size:14px;color:#29445d;margin:14px 0 7px}
+.login-page .auth-card input{height:47px;border-radius:11px;transition:border-color .2s,box-shadow .2s}
+.login-page .auth-card input:focus{outline:0;border-color:#60a5fa;box-shadow:0 0 0 3px #2563eb18;background:#fff}
+.login-page .auth-card .btn{height:47px;border-radius:11px;margin-top:20px;font-size:15px;transition:transform .2s,box-shadow .2s}
+.login-page .auth-card .btn:hover{transform:translateY(-1px);box-shadow:0 7px 18px #2563eb30}
+
+/* روابط صفحة الدخول */
+.login-page .auth-links{gap:8px 18px;margin-top:20px;padding-top:18px;border-top:1px solid #e4edf6}
+.login-page .auth-links a{font-size:13px;font-weight:700;color:#2563eb}
+.login-page .auth-links a:hover{text-decoration:underline}
+.login-page .error{margin:16px 0;border:1px solid #fecaca}
+
+/* فوتر صفحة الدخول */
+.login-footer{padding:20px;background:#fff;border-top:1px solid #d6e5f2;text-align:center}
+.login-footer-icons{display:flex;justify-content:center;align-items:center;gap:16px}
+.login-footer-icons a{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:21px;font-weight:900;background:#f1f5f9;color:#64748b;transition:transform .2s,opacity .2s}
+.login-footer-icons a:hover{transform:translateY(-2px);opacity:.85}
+.login-footer-icons a:nth-child(1){color:#2563eb}
+.login-footer-icons a:nth-child(2){color:#16a34a}
+.login-footer-icons a:nth-child(3){color:#dc2626}
+.login-footer-icons a:nth-child(4){color:#2563eb}
+.login-footer-copy{margin-top:14px;font-size:11px;color:#8193a3}
+
+/* ضبط صفحة الدخول للموبايل */
+@media(max-width:600px){
+    .login-page .auth-wrap{padding:28px 14px 22px}
+    .login-page .auth-card{padding:25px 20px;border-radius:18px}
+    .login-page .auth-card h1{font-size:24px}
+    .login-footer{padding:18px 12px 14px}
+}
+
+/* ضبط أيقونات الدخول للشاشات الصغيرة */
+@media(max-width:380px){
+    .login-footer-icons{gap:12px}
+    .login-footer-icons a{width:40px;height:40px}
+}
+
+/* هوية home.php */
+body:has(.customer-page){
+    background:#dbeafe;
+    color:#1e3a8a;
+}
+
+body:has(.customer-page)::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url('/hero.png') center 25% / 85% no-repeat;
+    opacity:.11;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* رأس صفحة العميل */
+body:has(.customer-page) .site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:58px;
+    padding:10px 15px;
+    background:#bfdbfe;
+    color:#1e3a8a;
+    border-bottom:2px solid #2563eb;
+    z-index:90;
+}
+
+body:has(.customer-page) .site-header>div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+body:has(.customer-page) .site-header>div:last-child{
+    gap:8px;
+}
+
+body:has(.customer-page) .home-header-logo{
+    width:38px;
+    height:38px;
+    flex-shrink:0;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #2563eb;
+}
+
+body:has(.customer-page) .site-header strong{
+    font-size:18px;
+    font-weight:800;
+}
+
+/* زر القائمة */
+body:has(.customer-page) .customer-menu-wrap{
+    position:relative;
+    display:block;
+    flex-shrink:0;
+    gap:0;
+}
+
+body:has(.customer-page) .customer-menu-btn{
+    width:44px;
+    height:44px;
+    padding:8px;
+    border:0;
+    border-radius:10px;
+    background:transparent;
+    color:#1e3a8a;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+}
+
+body:has(.customer-page) .customer-menu-btn span{
+    display:block;
+    width:25px;
+    height:3px;
+    border-radius:3px;
+    background:currentColor;
+    transition:.2s;
+}
+
+body:has(.customer-page) .customer-menu-btn.open span:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+body:has(.customer-page) .customer-menu-btn.open span:nth-child(2){
+    opacity:0;
+}
+
+body:has(.customer-page) .customer-menu-btn.open span:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+/* قائمة العميل والتبويبات داخلها */
+body:has(.customer-page) .customer-menu{
+    position:absolute;
+    top:calc(100% + 8px);
+    left:0;
+    width:220px;
+    padding:8px;
+    margin:0;
+    border-radius:14px;
+    background:#fff;
+    border:1px solid #c9dff5;
+    box-shadow:0 12px 30px rgba(0,0,0,.16);
+    display:none;
+    z-index:1000;
+}
+
+body:has(.customer-page) .customer-menu.open{
+    display:block;
+}
+
+body:has(.customer-page) .customer-menu-item{
+    width:100%;
+    min-height:44px;
+    padding:9px 12px;
+    border:0;
+    border-radius:9px;
+    background:transparent;
+    color:#1e3a8a;
+    text-decoration:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:9px;
+    font:inherit;
+    text-align:right;
+}
+
+body:has(.customer-page) .customer-menu-item:hover,
+body:has(.customer-page) .customer-menu-item.active{
+    background:#eef6ff;
+    color:#2563eb;
+}
+
+body:has(.customer-page) .customer-menu-item.logout{
+    color:#dc2626;
+}
+
+body:has(.customer-page) .customer-menu-item.logout:hover{
+    background:#fff1f2;
+    color:#dc2626;
+}
+
+/* محتوى التبويبات */
+body:has(.customer-page) .customer-tab-content{
+    display:none;
+}
+
+body:has(.customer-page) .customer-tab-content.active{
+    display:block;
+}
+
+/* مساحة الصفحة */
+body:has(.customer-page) .customer{
+    max-width:500px;
+    margin:0 auto;
+    padding:70px 15px 30px;
+    position:relative;
+    z-index:1;
+}
+
+/* البطاقة التعريفية */
+body:has(.customer-page) .hero-card{
+    background:rgba(239,246,255,.92);
+    border:2px solid #93c5fd;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(37,99,235,.08);
+}
+
+body:has(.customer-page) .hero-card h1{
+    margin:0 0 7px;
+    color:#1e3a8a;
+    font-size:21px;
+}
+
+body:has(.customer-page) .hero-card p{
+    margin:0;
+    color:#3b82f6;
+    line-height:1.7;
+}
+
+body:has(.customer-page) .hero-card img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #93c5fd;
+}
+
+/* شريط البحث */
+body:has(.customer-page) .toolbar{
+    background:rgba(239,246,255,.92);
+    border:2px solid #93c5fd;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:15px;
+    position:sticky;
+    top:58px;
+    z-index:10;
+    box-shadow:0 4px 12px rgba(37,99,235,.1);
+    backdrop-filter:blur(3px);
+}
+
+body:has(.customer-page) .toolbar input{
+    flex:1;
+    width:auto;
+    border:0;
+    outline:0;
+    padding:8px;
+    background:transparent;
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .toolbar input::placeholder{
+    color:#3b82f6;
+}
+
+body:has(.customer-page) .toolbar .btn{
+    width:auto;
+    background:#2563eb;
+    color:#fff;
+    padding:9px 15px;
+    border-radius:8px;
+}
+
+/* بطاقات الحلاقين */
+body:has(.customer-page) .cards{
+    display:grid;
+    gap:10px;
+}
+
+body:has(.customer-page) .card{
+    background:rgba(239,246,255,.92);
+    border:1px solid #93c5fd;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:10px;
+    box-shadow:0 2px 8px rgba(37,99,235,.08);
+}
+
+body:has(.customer-page) .barber-card{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    cursor:pointer;
+}
+
+body:has(.customer-page) .barber-card img{
+    width:58px;
+    height:58px;
+    flex-shrink:0;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #93c5fd;
+}
+
+body:has(.customer-page) .barber-card h3{
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .barber-card p{
+    color:#3b82f6;
+}
+
+body:has(.customer-page) .empty{
+    color:#3b82f6;
+}
+
+/* بطاقات العروض */
+body:has(.customer-page) .offer-item{
+    background:#dbeafe;
+    border:1px solid #93c5fd;
+}
+
+body:has(.customer-page) .offer-item p{
+    margin:7px 0;
+}
+
+body:has(.customer-page) .offer-item strong{
+    color:#1e3a8a;
+}
+
+/* بطاقات الولاء والتقييم */
+body:has(.customer-page) .customer-info{
+    text-align:center;
+}
+
+body:has(.customer-page) .customer-info h3{
+    margin-top:0;
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .customer-info p{
+    color:#3b82f6;
+    line-height:1.8;
+}
+
+body:has(.customer-page) .customer-info .actions{
+    margin-top:10px;
+}
+
+/* أزرار home.php */
+body:has(.customer-page) .btn{
+    background:#2563eb;
+    color:#fff;
+    border:0;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+body:has(.customer-page) .primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* النوافذ المنبثقة */
+body:has(.customer-page) .modal{
+    background:rgba(30,58,138,.35);
+    z-index:1000;
+    backdrop-filter:blur(3px);
+}
+
+body:has(.customer-page) .modal-card{
+    background:#eff6ff;
+    border:2px solid #93c5fd;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(37,99,235,.18);
+}
+
+/* عنوان نافذة الحجز */
+body:has(.customer-page) .modal-card h2{
+    color:#1e3a8a;
+    margin:0 0 8px;
+    font-size:21px;
+}
+
+body:has(.customer-page) .modal-card>p{
+    margin:8px 0;
+    color:#4b6b88;
+    line-height:1.7;
+}
+
+/* حقلا التاريخ والوقت بنفس الشكل */
+body:has(.customer-page) .modal-card #date,
+body:has(.customer-page) .modal-card #time{
+    display:block;
+    width:100%;
+    height:52px;
+    margin:16px 0 14px;
+    padding:0 14px;
+    border:2px solid #93c5fd;
+    border-radius:13px;
+    background:#fff;
+    color:#1e3a8a;
+    font-family:inherit;
+    font-size:15px;
+    font-weight:700;
+    outline:0;
+    cursor:pointer;
+    transition:border-color .2s,box-shadow .2s,background .2s;
+}
+
+body:has(.customer-page) .modal-card #date:hover,
+body:has(.customer-page) .modal-card #time:hover{
+    border-color:#60a5fa;
+    background:#f8fbff;
+}
+
+body:has(.customer-page) .modal-card #date:focus,
+body:has(.customer-page) .modal-card #time:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+    background:#fff;
+}
+
+body:has(.customer-page) .modal-card #date::-webkit-calendar-picker-indicator,
+body:has(.customer-page) .modal-card #time::-webkit-calendar-picker-indicator{
+    width:22px;
+    height:22px;
+    padding:2px;
+    cursor:pointer;
+    opacity:.8;
+}
+
+/* منطقة المواعيد */
+body:has(.customer-page) .slots{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+    margin:8px 0 18px;
+    padding:12px;
+    background:rgba(219,234,254,.65);
+    border:1px solid #bfdbfe;
+    border-radius:14px;
+}
+
+body:has(.customer-page) .slot{
+    min-height:46px;
+    padding:9px 6px;
+    border:2px solid #bfdbfe;
+    border-radius:11px;
+    text-align:center;
+    cursor:pointer;
+    background:#fff;
+    color:#1e3a8a;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:14px;
+    font-weight:800;
+    transition:transform .15s,border-color .15s,background .15s,color .15s,box-shadow .15s;
+}
+
+body:has(.customer-page) .slot:hover{
+    border-color:#60a5fa;
+    background:#eff6ff;
+    transform:translateY(-1px);
+}
+
+body:has(.customer-page) .slot.selected{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+    box-shadow:0 5px 12px rgba(37,99,235,.25);
+    transform:translateY(-1px);
+}
+
+body:has(.customer-page) .slots p{
+    grid-column:1/-1;
+    margin:4px 0;
+    padding:10px;
+    text-align:center;
+    color:#55718d;
+    line-height:1.7;
+}
+
+body:has(.customer-page) .slots .danger-text{
+    color:#b91c1c;
+}
+
+/* زر تأكيد الحجز */
+body:has(.customer-page) .modal-card #confirm{
+    width:100%;
+    min-height:48px;
+    margin-top:2px;
+    border-radius:12px;
+    font-size:15px;
+    box-shadow:0 6px 15px rgba(37,99,235,.18);
+    transition:transform .15s,box-shadow .15s,opacity .15s;
+}
+
+body:has(.customer-page) .modal-card #confirm:hover:not(:disabled){
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(37,99,235,.25);
+}
+
+body:has(.customer-page) .modal-card #confirm:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+/* الخدمات */
+body:has(.customer-page) .service-option{
+    background:#dbeafe;
+    border:2px solid #93c5fd;
+    border-radius:10px;
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .service-option.selected{
+    background:#bfdbfe;
+    border-color:#2563eb;
+}
+
+body:has(.customer-page) .service-option input{
+    accent-color:#2563eb;
+}
+
+/* زر إغلاق النافذة */
+body:has(.customer-page) .modal-close{
+    background:#dbeafe;
+    color:#1e3a8a;
+    border:1px solid #93c5fd;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:700;
+    transition:background .2s;
+}
+
+body:has(.customer-page) .modal-close:hover{
+    background:#bfdbfe;
+}
+
+/* الفاصل */
+body:has(.customer-page) .hr{
+    border-top:1px solid #93c5fd;
+}
+
+/* فوتر home.php */
+body:has(.customer-page) .site-footer{
+    background:#bfdbfe;
+    border-top:2px solid #2563eb;
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .footer-links a{
+    color:#1e3a8a;
+}
+
+body:has(.customer-page) .footer-contact a{
+    color:#3b82f6;
+}
+
+body:has(.customer-page) .footer-copy{
+    color:#3b82f6;
+}
+
+/* ضبط home.php للموبايل */
+@media(max-width:600px){
+    .login-page .auth-wrap{padding:28px 14px 22px}
+    .login-page .auth-card{padding:25px 20px;border-radius:18px}
+    .login-page .auth-card h1{font-size:24px}
+    .login-footer{padding:18px 12px 14px}
+
+    body:has(.customer-page) .customer{
+        padding:68px 12px 25px;
+    }
+
+    body:has(.customer-page) .hero-card{
+        padding:13px;
+    }
+
+    body:has(.customer-page) .hero-card h1{
+        font-size:20px;
+    }
+
+    body:has(.customer-page) .hero-card img{
+        width:62px;
+        height:62px;
+    }
+
+    body:has(.customer-page) .customer-menu{
+        width:210px;
+        left:0;
+        right:auto;
+    }
+
+    body:has(.customer-page) .customer-menu-item{
+        min-height:42px;
+        padding:8px 11px;
+        font-size:13px;
+    }
+
+    body:has(.customer-page) .toolbar{
+        top:58px;
+    }
+
+    body:has(.customer-page) .modal{
+        align-items:flex-start;
+        padding:70px 10px 15px;
+    }
+
+    body:has(.customer-page) .modal-card{
+        width:100%;
+        max-height:calc(100vh - 85px);
+        padding:16px;
+        border-radius:16px;
+    }
+
+    body:has(.customer-page) .modal-card #date,
+    body:has(.customer-page) .modal-card #time{
+        height:50px;
+        margin-top:14px;
+        font-size:14px;
+    }
+
+    body:has(.customer-page) .slots{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+        padding:10px;
+    }
+
+    body:has(.customer-page) .slot{
+        min-height:45px;
+        font-size:13px;
+    }
+}
+
+/* تصغير العناصر في الشاشات الضيقة */
+@media(max-width:380px){
+    .login-footer-icons{gap:12px}
+    .login-footer-icons a{width:40px;height:40px}
+
+    body:has(.customer-page) .toolbar{
+        gap:5px;
+        padding:8px;
+    }
+
+    body:has(.customer-page) .toolbar .btn{
+        padding:8px 10px;
+        font-size:12px;
+    }
+
+    body:has(.customer-page) .hero-card img{
+        width:55px;
+        height:55px;
+    }
+
+    body:has(.customer-page) .slots{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    body:has(.customer-page) .modal-card{
+        padding:14px;
+    }
+
+    body:has(.customer-page) .modal-card h2{
+        font-size:19px;
+    }
+
+    body:has(.customer-page) .modal-card #date,
+    body:has(.customer-page) .modal-card #time{
+        height:48px;
+        font-size:14px;
+    }
+
+    body:has(.customer-page) .slot{
+        min-height:43px;
+        font-size:12px;
+    }
+}
